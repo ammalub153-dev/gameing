@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.frt-box{
+    min-width:100vw;
+    min-height: 100vh;
+    background-image: url(./alps-mountains-mountain-range-summer-sunny-day-forest-clear-1280x1280-5384\ 1.png);
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 50%;
+}
+
+/* nav-bar */
+.navbar{
+    width: 100%;
+    padding: 15px 40px;
+    background: #0d1b2a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    opacity: 100%;
+}
+
+.logo{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i{
+    color: #00b4d8;
+    font-size: 22px;
+}
+
+/* Desktop Menu */
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 8px 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* MOBILE */
+.menu-toggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 850px){
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #0d1b2a;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        display: none;
+        gap: 15px;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked + .hamburger + nav .nav-links{
+        display: flex;
+    }
+}
+
