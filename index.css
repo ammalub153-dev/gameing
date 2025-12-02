@@ -10,6 +10,7 @@
 }
 .hero {
     position: relative;
+    
     padding: 60px 8%;
     min-height: 100vh;
     display: flex;
@@ -19,13 +20,13 @@
     overflow: hidden;
 }
 
-/* BACKGROUND IMAGE (Opacity only affects background) */
+/* BACKGROUND IMAGE  */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: url("./alps-mountains-mountain-range-summer-sunny-day-forest-clear-1280x1280-5384\ 1.png") no-repeat center/cover;
-    opacity: 0.35;       /* 👈 Decrease background image opacity */
+    opacity: 0.35;   
     z-index: -1;
 }
 
@@ -74,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
 .hero-image img {
@@ -164,7 +166,7 @@
 /* Logo */
 .logo {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
 }
 
@@ -194,7 +196,7 @@
 }
 
 .nav-links li a:hover {
-    color: #007bff;
+    color: #ffffff;
 }
 
 /* Hamburger Icon */
