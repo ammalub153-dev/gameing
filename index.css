@@ -1,4 +1,4 @@
-/* HERO SECTION */
+    
 *{
     margin: 0px;
     padding: 0px;
@@ -6,8 +6,225 @@
 }
 .container{
     min-width: 100vw;
-    min-height:100vh;
+    min-height: 100vh;
 }
+
+/* Navbar Container */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    gap: 120px;
+    left: 0;
+    z-index: 999;
+      animation: linear;
+    animation-name: run;
+    animation-duration: 3s;
+}
+
+@keyframes run {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #000000;
+}
+
+/* Desktop Nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: white;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hide toggle input */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: block;
+    }
+
+    /* Mobile menu hidden at right */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;   /* hidden to left */
+        width: 100%;
+        height: 40vh;
+        background: #fff;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding-top: 40px;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+    }
+
+
+/* Navbar Container */
+.navbar {
+    width: 100%;
+    padding: 15px 40px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 45px;
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Desktop Nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hide toggle input */
+.menu-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: block;
+    }
+
+    /* Mobile menu hidden at right */
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;   /* hidden to left */
+        width: 100%;
+        height: 40vh;
+        background: #fff;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding-top: 40px;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+        
+    }
+
+    /* Slide-in animation (left → right) */
+    .menu-toggle:checked ~ nav .nav-links {
+        left: 0;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+    }
+}
+
+    }
+
+    /* Slide-in animation (left → right) */
+    .menu-toggle:checked ~ nav .nav-links {
+        left: 0;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+/* HERO SECTION */
+
 .hero {
     position: relative;
     padding: 60px 8%;
@@ -19,13 +236,13 @@
     overflow: hidden;
 }
 
-/* BACKGROUND IMAGE  */
+/* BACKGROUND IMAGE (Opacity only affects background) */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: url("./alps-mountains-mountain-range-summer-sunny-day-forest-clear-1280x1280-5384\ 1.png") no-repeat center/cover;
-    opacity: 0.35;   
+    opacity: 0.35;       /* 👈 Decrease background image opacity */
     z-index: -1;
 }
 
@@ -66,21 +283,20 @@
 
 /* CENTER CIRCLE IMAGE */
 .hero-image {
-    width: 500px;
-    height: 500px;
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
     overflow: hidden;
+    border: 4px solid #a3d4ff;
     display: flex;
     justify-content: center;
-    align-items: end;
- 
+    align-items: center;
 }
 
 .hero-image img {
-    width:500px;
-    height:500px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
 }
 
 /* RIGHT TEXT */
@@ -132,117 +348,5 @@
 
     .hero-image {
         width: 240px;
-        height: 240px;
+        height:249px;}
     }
-}
-/* Navbar Container */
-.navbar {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    gap: 30px;
-    z-index: 999;
-    animation: linear;
-    animation-name: run;
-    animation-duration: 3s;
-}
-
-@keyframes run {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-
-/* Logo */
-.logo {
-    display: flex;
-    align-items: start;
-    gap: 10px;
-}
-
-.logo-img {
-    width: 350px;
-    height: auto;
-}
-
-.logo h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-/* Desktop Nav */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    font-size: 35px;
-    color: #333;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #ffffff;
-}
-
-/* Hamburger Icon */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Hide toggle input */
-.menu-toggle {
-    display: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: block;
-    }
-
-    /* Mobile menu hidden at right */
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        /* hidden to left */
-        width: 100%;
-        padding: 10px;
-        background: #fff;
-        flex-direction: column;
-        text-align: center;
-        gap: 35px;
-        padding-top: 25px;
-        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
-
-        /* Animation */
-        transition: left 0.6s ease;
-    }
-
-    /* Slide-in animation (left → right) */
-    .menu-toggle:checked~nav .nav-links {
-        left: 0;
-    }
-
-    .nav-links li a {
-        font-size: 20px;
-    }
-}
